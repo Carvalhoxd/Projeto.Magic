@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f0f0f0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 80px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: transparent;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+/* Adicione esta regra CSS para a barra embaixo dos nomes do menu */
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: white;
+  transition: color 0.3s;
+  /* Adicione a barra embaixo dos nomes do menu */
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px; /* Altura da barra */
+    background-color: white; /* Cor da barra */
+    bottom: -5px; /* Posição da barra em relação ao texto */
+    left: 0;
+  }
+}
+
+#logo {
+  width: 20%;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+section {
+  padding: 50px;
+  text-align: center;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+section h2 {
+  font-size: 36px;
+  max-width: 85%;
+  margin: 0 auto;
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#home1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(imagem/golfgti.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: white;
+  text-align: left;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 100vh;
+}
+
+#home1 h2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.699);
+}
+
+#home1 p {
+  font-size: 36px;
+  color: #000000;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  nav img {
+    width: 120px;
+    margin-right: 0;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  #home1 {
+    margin-top: 0;
+  }
+}
+
+#sobrenos2 {
+  background-image: url(imagem/imagem2.jpg); /* Substitua 'caminho-da-imagem.jpg' pelo caminho correto da sua imagem */
+  background-size: cover; /* Para cobrir toda a área da seção */
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white; /* Adicione a cor do texto para melhor visibilidade */
+  text-align: center; /* Centralize o conteúdo */
+  padding: 50px; /* Adicione espaçamento interno */
+  min-height: 100vh; /* Altere min-height para 100vh para cobrir a altura total da janela */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.171);
+}
+
+#servicos3 {
+  height: 100vh; /* Define a altura como 100% da altura da janela (viewport height) */
+  background-image: url(plano\ de\ fundo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#carouselExample {
+  max-width: 50%; /* Defina a largura máxima desejada para o carrossel */
+  margin: 0 auto; /* Centralize o carrossel horizontalmente */
+}
+
+/* Fundo degradê para a seção "Serviços" */
+#servicos3 {
+  text-align: center; /* Centralize o conteúdo */
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(65, 12, 12, 0.925)); /* Substitua as cores pelo seu degradê desejado */
+  padding: 50px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+#orcamento {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
